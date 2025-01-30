@@ -177,5 +177,64 @@ Use constants where values don’t change: If a value is never supposed to chang
 ```
 const MaxItems = 100
 ```
+## how Go behaves when assigned to new variables or passed to functions.
 
-Conclusion
+### 1️⃣ Value Type
+A value type stores the actual value in memory. When you assign a value type variable to another variable, a copy of the value is made.
+
+🔹 Characteristics of Value Types
+✔️ Stored in the stack (fast access).
+✔️ Each variable has its own copy of data.
+✔️ Changes to one variable do not affect the original.
+✔️ Generally used for small, simple data types.
+
+🔸 Examples of Value Types
+Go: int, float64, bool, string, array, struct (non-pointer).
+
+Example (Value Type Behavior)
+```
+package main
+import "fmt"
+
+func main() {
+    a := 10
+    b := a  // A copy of a is assigned to b
+
+    b = 20  // Changing b does not affect a
+    fmt.Println(a) // Output: 10
+    fmt.Println(b) // Output: 20
+}
+```
+
+
+
+### 2️⃣ Reference Type
+A reference type stores a memory address (reference) instead of the actual value. When assigned to another variable, both variables point to the same memory location.
+
+🔹 Characteristics of Reference Types
+✔️ Stored in the heap (slower but dynamic).
+✔️ Multiple variables can reference the same data.
+✔️ Changes to one variable affect all references.
+✔️ Used for complex data structures like slices, maps, pointers, and objects.
+
+🔸 Examples of Reference Types
+Go: slice, map, pointer, channel, interface.
+
+
+Example (Reference Type Behavior)
+
+```
+package main
+import "fmt"
+
+func main() {
+    a := []int{1, 2, 3}
+    b := a  // Both point to the same memory location
+
+    b[0] = 100  // Changing b affects a
+    fmt.Println(a) // Output: [100, 2, 3]
+    fmt.Println(b) // Output: [100, 2, 3]
+}
+```
+
+
