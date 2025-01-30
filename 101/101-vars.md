@@ -177,7 +177,7 @@ Use constants where values don’t change: If a value is never supposed to chang
 ```
 const MaxItems = 100
 ```
-## how Go behaves when assigned to new variables or passed to functions.
+## Value Type vs Reference Type
 
 ### 1️⃣ Value Type
 A value type stores the actual value in memory. When you assign a value type variable to another variable, a copy of the value is made.
