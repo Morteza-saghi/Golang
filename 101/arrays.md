@@ -22,14 +22,15 @@ array_name := [...]datatype{values} // here length is inferred
 
 ---
 
+---
 
-1. Arrays
-Fixed Size: The size of an array is part of its type. Once defined, the size cannot be changed.
+### 1. Arrays
 
-Declaration:
+**Fixed Size**: The size of an array is part of its type. Once defined, the size cannot be changed.
 
-go
-Copy
+**Declaration**:
+
+```go
 var arr [5]int // An array of 5 integers
 or
 
@@ -85,6 +86,3 @@ slice := []int{1, 2, 3}
 slice = append(slice, 4) // Append a new element
 fmt.Println(slice) // [1, 2, 3, 4]
 Use Case: Slices are the preferred way to work with collections in Go because of their flexibility and dynamic nature.
-
-
-
