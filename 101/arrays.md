@@ -1,29 +1,3 @@
-
-
-```
-var array_name = [length]datatype{values} // here length is defined
-
-or
-
-var array_name = [...]datatype{values} // here length is inferred
-
-```
-
-
-
-#### or declaring with :=
-
-array_name := [length]datatype{values} // here length is defined
-
-or
-
-array_name := [...]datatype{values} // here length is inferred
-
-
----
-
----
-
 ### 1. Arrays
 
 **Fixed Size**: The size of an array is part of its type. Once defined, the size cannot be changed.
