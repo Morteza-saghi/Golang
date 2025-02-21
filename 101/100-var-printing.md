@@ -75,6 +75,11 @@ fmt.Println("Address of x:", &x)       // Output: Address of x: <memory_address>
 
 ```
 
+Summary of the & Operator
+
+&: Used to get the memory address of a variable.
+
+
 ### check for the type 
 
 ```
@@ -82,9 +87,3 @@ fmt.Println(reflect.ValueOf(thisSlice).Kind())
 ```
 
 
-
-
-
-Summary of the & Operator
-
-&: Used to get the memory address of a variable.
