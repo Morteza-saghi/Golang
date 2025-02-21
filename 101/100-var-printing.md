@@ -75,6 +75,15 @@ fmt.Println("Address of x:", &x)       // Output: Address of x: <memory_address>
 
 ```
 
+### check for the type 
+
+```
+fmt.Println(reflect.ValueOf(thisSlice).Kind())
+```
+
+
+
+
 
 Summary of the & Operator
 
