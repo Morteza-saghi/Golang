@@ -238,3 +238,5 @@ func main() {
 ```
 
 
+* variables and functions can be private or public based on their name's case. Public identifiers start with an uppercase letter (e.g., MyFunction, MyVar) and are accessible from other packages. Private identifiers start with a lowercase letter (e.g., myFunction, myVar) and are only accessible within the same package. This applies to structs, methods, and constants too. For example, type MyStruct struct { PublicField int; privateField int } has PublicField exportable, but privateField is not. Use public for APIs and private for internal logic. Packages enforce encapsulation, and Go has no explicit access modifiers like private or public—it’s all case-based. Always consider package boundaries when designing access.
+
